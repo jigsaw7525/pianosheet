@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Sheet</h1>
+
+<div id="sheets-table">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>標題</th>
+                <th>譜</th>
+                <th>作者</th>
+                <th>檢視次數</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sheet in sheets %}
+            <tr>
+                <td>{{sheet.createdon}}</td>
+                <td>{{sheet.title}}</td>
+                <td>{{sheet.picture}}</td>
+                <td>{{sheet.composer}}</td>
+                <td>{{sheet.view}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+{% endblock %}
